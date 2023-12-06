@@ -8,5 +8,11 @@ services:
     volumes:
       - db-bookstore:/data/db
 
+  redis:
+    container_name: redis-bookstore
+    image: redis:alpine3.18
+    ports:
+      - 6379:6379
+
 volumes:
   db-bookstore:
